@@ -51,7 +51,7 @@ public class MainJFrame extends javax.swing.JFrame {
     }
     
      private void addPerson(ArrayList personList){
-      Person p1 = new Person("Swapnil", "Bhasgauri", 23, "Boston", "Allston", "14 huntington", 12345, "Swapnil", "@Swapnil1998", "Male");
+      Person p1 = new Person("Dushyant", "Mahajan", 25, "Boston", "Allston", "Sector 21", 12345, "dushyant", "Dushyant@123", "Male");
       
       personList.add(p1);
     }
@@ -111,10 +111,15 @@ public class MainJFrame extends javax.swing.JFrame {
         workAreaPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 204, 255));
 
+        splitPanel.setBackground(new java.awt.Color(153, 204, 255));
+
+        userPanel.setBackground(new java.awt.Color(255, 255, 255));
         userPanel.setPreferredSize(new java.awt.Dimension(200, 600));
 
-        systemAdminBtn.setBackground(new java.awt.Color(102, 255, 204));
+        systemAdminBtn.setBackground(new java.awt.Color(102, 204, 255));
+        systemAdminBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         systemAdminBtn.setText("System Admin");
         systemAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +127,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        communityAdminBtn.setBackground(new java.awt.Color(102, 255, 204));
+        communityAdminBtn.setBackground(new java.awt.Color(102, 204, 255));
+        communityAdminBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         communityAdminBtn.setText("Community Admin");
         communityAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +136,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        doctorBtn.setBackground(new java.awt.Color(102, 255, 204));
+        doctorBtn.setBackground(new java.awt.Color(102, 204, 255));
+        doctorBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         doctorBtn.setText("Doctor");
         doctorBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +145,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        personBtn.setBackground(new java.awt.Color(102, 255, 204));
+        personBtn.setBackground(new java.awt.Color(102, 204, 255));
+        personBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         personBtn.setText("Person");
         personBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +154,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        hospitalAdminBtn.setBackground(new java.awt.Color(102, 255, 204));
+        hospitalAdminBtn.setBackground(new java.awt.Color(102, 204, 255));
+        hospitalAdminBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         hospitalAdminBtn.setText("Hospital Admin");
         hospitalAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,41 +169,44 @@ public class MainJFrame extends javax.swing.JFrame {
             userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(userPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(communityAdminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, Short.MAX_VALUE)
-                    .addComponent(systemAdminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(doctorBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(personBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(hospitalAdminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(communityAdminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                        .addComponent(systemAdminBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(doctorBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(personBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(hospitalAdminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         userPanelLayout.setVerticalGroup(
             userPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(userPanelLayout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addComponent(personBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(doctorBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(systemAdminBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(communityAdminBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hospitalAdminBtn)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addGap(110, 110, 110)
+                .addComponent(personBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(doctorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(hospitalAdminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(communityAdminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(systemAdminBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(227, 227, 227))
         );
 
         splitPanel.setLeftComponent(userPanel);
+
+        workAreaPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout workAreaPanelLayout = new javax.swing.GroupLayout(workAreaPanel);
         workAreaPanel.setLayout(workAreaPanelLayout);
         workAreaPanelLayout.setHorizontalGroup(
             workAreaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 367, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         workAreaPanelLayout.setVerticalGroup(
             workAreaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 439, Short.MAX_VALUE)
+            .addGap(0, 540, Short.MAX_VALUE)
         );
 
         splitPanel.setRightComponent(workAreaPanel);
@@ -203,14 +215,15 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
+            .addComponent(splitPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE)
+            .addComponent(splitPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void systemAdminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_systemAdminBtnActionPerformed
@@ -233,9 +246,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void personBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personBtnActionPerformed
         // TODO add your handling code here:
-        viewPersonPanel viewPatient = new viewPersonPanel(personDirectory, patientDirectory, cityList, communityDirectory, hospitalDirectory
+        viewPersonPanel viewPerson = new viewPersonPanel(personDirectory, patientDirectory, cityList, communityDirectory, hospitalDirectory
             , doctorDirectory, houseDirectory);
-        splitPanel.setRightComponent(viewPatient);
+        splitPanel.setRightComponent(viewPerson);
     }//GEN-LAST:event_personBtnActionPerformed
 
     private void hospitalAdminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hospitalAdminBtnActionPerformed

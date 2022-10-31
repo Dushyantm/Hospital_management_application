@@ -64,7 +64,6 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         hosDirBtn1 = new javax.swing.JButton();
         BtnLogout = new javax.swing.JButton();
         commPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         viewHosTable = new javax.swing.JTable();
         btnUpdatePerson = new javax.swing.JButton();
@@ -84,7 +83,6 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         commComboBox = new javax.swing.JComboBox<>();
         lblStrength = new javax.swing.JLabel();
         commHousePanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         viewHouseTable = new javax.swing.JTable();
         lblHouseId = new javax.swing.JLabel();
@@ -102,21 +100,36 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         cityComboBox1 = new javax.swing.JComboBox<>();
         commComboBox1 = new javax.swing.JComboBox<>();
 
+        setPreferredSize(new java.awt.Dimension(800, 540));
+
+        jLayeredPane1.setPreferredSize(new java.awt.Dimension(800, 540));
         jLayeredPane1.setLayout(new java.awt.CardLayout());
+
+        commLoginPanel.setBackground(new java.awt.Color(255, 255, 255));
+        commLoginPanel.setPreferredSize(new java.awt.Dimension(800, 540));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Community Admin Login");
 
+        lblUserName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblUserName.setText("Username:");
 
+        lblUserName1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblUserName1.setText("Password:");
 
-        loginBtn3.setBackground(new java.awt.Color(204, 255, 204));
+        loginBtn3.setBackground(new java.awt.Color(102, 204, 255));
+        loginBtn3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         loginBtn3.setText("Login");
         loginBtn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginBtn3ActionPerformed(evt);
+            }
+        });
+
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPasswordActionPerformed(evt);
             }
         });
 
@@ -127,50 +140,51 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             .addGroup(commLoginPanelLayout.createSequentialGroup()
                 .addGroup(commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(commLoginPanelLayout.createSequentialGroup()
-                        .addGap(154, 154, 154)
+                        .addGap(239, 239, 239)
                         .addComponent(jLabel2))
                     .addGroup(commLoginPanelLayout.createSequentialGroup()
-                        .addGap(201, 201, 201)
+                        .addGap(285, 285, 285)
                         .addGroup(commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(commLoginPanelLayout.createSequentialGroup()
-                                .addComponent(lblUserName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtuserName, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(commLoginPanelLayout.createSequentialGroup()
-                                .addComponent(lblUserName1)
-                                .addGroup(commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(commLoginPanelLayout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addComponent(loginBtn3))
-                                    .addGroup(commLoginPanelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(254, Short.MAX_VALUE))
+                            .addComponent(lblUserName)
+                            .addComponent(lblUserName1))
+                        .addGap(18, 18, 18)
+                        .addGroup(commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtuserName, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(commLoginPanelLayout.createSequentialGroup()
+                        .addGap(341, 341, 341)
+                        .addComponent(loginBtn3)))
+                .addGap(279, 279, 279))
         );
         commLoginPanelLayout.setVerticalGroup(
             commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commLoginPanelLayout.createSequentialGroup()
-                .addGap(124, 124, 124)
+                .addGap(46, 46, 46)
                 .addComponent(jLabel2)
-                .addGap(50, 50, 50)
+                .addGap(47, 47, 47)
                 .addGroup(commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUserName)
-                    .addComponent(txtuserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(txtuserName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUserName))
+                .addGap(18, 18, 18)
                 .addGroup(commLoginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUserName1)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(loginBtn3)
-                .addContainerGap(286, Short.MAX_VALUE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUserName1))
+                .addGap(29, 29, 29)
+                .addComponent(loginBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(275, 275, 275))
         );
 
         jLayeredPane1.add(commLoginPanel, "card2");
 
+        commChoosePanel.setBackground(new java.awt.Color(255, 255, 255));
+        commChoosePanel.setPreferredSize(new java.awt.Dimension(800, 540));
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Community Admin");
+        jLabel4.setText("Welcome Community Admin");
 
+        hosDirBtn.setBackground(new java.awt.Color(102, 204, 255));
+        hosDirBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         hosDirBtn.setText("Hospital Directory");
         hosDirBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +192,8 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
+        hosDirBtn1.setBackground(new java.awt.Color(102, 204, 255));
+        hosDirBtn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         hosDirBtn1.setText("House Directory");
         hosDirBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,8 +201,12 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
-        BtnLogout.setBackground(new java.awt.Color(0, 204, 204));
-        BtnLogout.setText("Logout");
+        BtnLogout.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnLogout.setForeground(new java.awt.Color(255, 51, 51));
+        BtnLogout.setText("<html> <u>Logout</u> </html>");
+        BtnLogout.setBorderPainted(false);
+        BtnLogout.setContentAreaFilled(false);
+        BtnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         BtnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnLogoutActionPerformed(evt);
@@ -197,41 +217,37 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         commChoosePanel.setLayout(commChoosePanelLayout);
         commChoosePanelLayout.setHorizontalGroup(
             commChoosePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commChoosePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(commChoosePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(hosDirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(hosDirBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(232, 232, 232))
             .addGroup(commChoosePanelLayout.createSequentialGroup()
-                .addGroup(commChoosePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(commChoosePanelLayout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(jLabel4))
-                    .addGroup(commChoosePanelLayout.createSequentialGroup()
-                        .addGap(255, 255, 255)
-                        .addComponent(BtnLogout)))
-                .addContainerGap(298, Short.MAX_VALUE))
+                .addGap(309, 309, 309)
+                .addGroup(commChoosePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(hosDirBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hosDirBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(commChoosePanelLayout.createSequentialGroup()
+                .addGap(218, 218, 218)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addComponent(BtnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70))
         );
         commChoosePanelLayout.setVerticalGroup(
             commChoosePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commChoosePanelLayout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addComponent(jLabel4)
-                .addGap(56, 56, 56)
-                .addComponent(hosDirBtn)
-                .addGap(28, 28, 28)
-                .addComponent(hosDirBtn1)
                 .addGap(57, 57, 57)
-                .addComponent(BtnLogout)
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addGroup(commChoosePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(BtnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addComponent(hosDirBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(hosDirBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(309, 309, 309))
         );
 
         jLayeredPane1.add(commChoosePanel, "card2");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Community Admin");
+        commPanel.setBackground(new java.awt.Color(255, 255, 255));
+        commPanel.setPreferredSize(new java.awt.Dimension(800, 540));
 
         viewHosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -254,6 +270,7 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(viewHosTable);
 
+        btnUpdatePerson.setBackground(new java.awt.Color(102, 204, 255));
         btnUpdatePerson.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         btnUpdatePerson.setText("Update");
         btnUpdatePerson.addActionListener(new java.awt.event.ActionListener() {
@@ -268,8 +285,7 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         lblLname.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         lblLname.setText("Hospital Name:");
 
-        txtHosName.setFont(new java.awt.Font("Didot", 3, 14)); // NOI18N
-        txtHosName.setForeground(new java.awt.Color(153, 153, 0));
+        txtHosName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtHosName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHosNameActionPerformed(evt);
@@ -284,8 +300,7 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         lblAge.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         lblAge.setText("Capacity:");
 
-        txtStrength.setFont(new java.awt.Font("Didot", 3, 14)); // NOI18N
-        txtStrength.setForeground(new java.awt.Color(153, 153, 0));
+        txtStrength.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtStrength.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtStrengthKeyReleased(evt);
@@ -298,6 +313,7 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         lblCity.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         lblCity.setText("City:");
 
+        btnAddHos.setBackground(new java.awt.Color(102, 204, 255));
         btnAddHos.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         btnAddHos.setText("Add Hospital");
         btnAddHos.addActionListener(new java.awt.event.ActionListener() {
@@ -306,25 +322,33 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSaveUpdate.setBackground(new java.awt.Color(102, 204, 255));
         btnSaveUpdate.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         btnSaveUpdate.setText("Save Updates");
+        btnSaveUpdate.setMargin(new java.awt.Insets(2, 5, 3, 5));
         btnSaveUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveUpdateActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txthosID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Hospital Directory");
 
-        BtnBack.setText("Back");
+        BtnBack.setFont(BtnBack.getFont().deriveFont(BtnBack.getFont().getSize()+5f));
+        BtnBack.setText("↩");
+        BtnBack.setBorderPainted(false);
+        BtnBack.setContentAreaFilled(false);
         BtnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnBackActionPerformed(evt);
             }
         });
 
+        cityComboBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cityComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "New York" }));
         cityComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,6 +356,7 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
+        commComboBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         commComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
         commComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,114 +364,98 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
-        lblStrength.setFont(new java.awt.Font("Didot", 3, 14)); // NOI18N
-        lblStrength.setForeground(new java.awt.Color(0, 102, 102));
+        lblStrength.setFont(new java.awt.Font("Segoe UI", 2, 10)); // NOI18N
 
         javax.swing.GroupLayout commPanelLayout = new javax.swing.GroupLayout(commPanel);
         commPanel.setLayout(commPanelLayout);
         commPanelLayout.setHorizontalGroup(
             commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(commPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(commPanelLayout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(btnAddHos)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(commPanelLayout.createSequentialGroup()
-                        .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(commPanelLayout.createSequentialGroup()
-                                .addComponent(lblAge)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtStrength, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(commPanelLayout.createSequentialGroup()
-                                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblFname)
-                                    .addComponent(lblLname))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtHosName)
-                                    .addComponent(txthosID, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(commPanelLayout.createSequentialGroup()
-                                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblCity)
-                                    .addComponent(lblComm))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cityComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(commComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblStrength, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addGroup(commPanelLayout.createSequentialGroup()
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 689, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnUpdatePerson)
-                        .addGap(9, 9, 9)
-                        .addComponent(btnSaveUpdate)))
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commPanelLayout.createSequentialGroup()
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commPanelLayout.createSequentialGroup()
+                        .addComponent(btnUpdatePerson, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSaveUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commPanelLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))))
+            .addGroup(commPanelLayout.createSequentialGroup()
+                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(commPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(commPanelLayout.createSequentialGroup()
+                                .addGap(64, 64, 64)
+                                .addComponent(lblFname))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblLname, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblAge, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txthosID, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(commPanelLayout.createSequentialGroup()
+                                .addComponent(txtStrength, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(77, 77, 77)
+                                .addComponent(lblComm)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(commComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(commPanelLayout.createSequentialGroup()
+                                .addComponent(txtHosName, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(129, 129, 129)
+                                .addComponent(lblCity)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblStrength, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAddHos)))
                     .addGroup(commPanelLayout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addComponent(BtnBack)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(211, 211, 211))
+                        .addGap(203, 203, 203)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(199, 199, 199))
         );
         commPanelLayout.setVerticalGroup(
             commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commPanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(31, 31, 31)
                 .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnBack))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                    .addComponent(BtnBack)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdatePerson)
-                    .addComponent(btnSaveUpdate))
-                .addGap(18, 18, 18)
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSaveUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdatePerson, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(lblFname)
-                    .addComponent(txthosID, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(commPanelLayout.createSequentialGroup()
-                        .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblLname)
-                            .addComponent(txtHosName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblAge)
-                            .addComponent(txtStrength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lblStrength, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCity)
-                    .addComponent(cityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblComm)
-                    .addComponent(commComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txthosID, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnAddHos)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(cityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHosName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblLname)
+                    .addComponent(lblCity))
+                .addGap(18, 18, 18)
+                .addGroup(commPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lblComm)
+                    .addComponent(commComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtStrength, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblAge))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblStrength, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAddHos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
 
         jLayeredPane1.add(commPanel, "card3");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Community Admin");
+        commHousePanel.setBackground(new java.awt.Color(255, 255, 255));
 
         viewHouseTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -472,11 +481,12 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         lblHouseId.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         lblHouseId.setText("House ID:");
 
+        txthouseId.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
         lblHouseName.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         lblHouseName.setText("House Name:");
 
-        txtHouseName.setFont(new java.awt.Font("Didot", 3, 14)); // NOI18N
-        txtHouseName.setForeground(new java.awt.Color(153, 153, 0));
+        txtHouseName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtHouseName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtHouseNameKeyReleased(evt);
@@ -489,7 +499,8 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         lblHouseCity.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
         lblHouseCity.setText("City:");
 
-        btnAddHouse.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
+        btnAddHouse.setBackground(new java.awt.Color(102, 204, 255));
+        btnAddHouse.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnAddHouse.setText("Add House");
         btnAddHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -497,7 +508,8 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
-        btnUpdateHouse.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
+        btnUpdateHouse.setBackground(new java.awt.Color(102, 204, 255));
+        btnUpdateHouse.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnUpdateHouse.setText("Update");
         btnUpdateHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -505,19 +517,22 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSaveHouseUpdate.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
+        btnSaveHouseUpdate.setBackground(new java.awt.Color(102, 204, 255));
+        btnSaveHouseUpdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSaveHouseUpdate.setText("Save Updates");
+        btnSaveHouseUpdate.setMargin(new java.awt.Insets(2, 5, 3, 5));
         btnSaveHouseUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveHouseUpdateActionPerformed(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("House Directory");
 
-        btnDeleteHouse.setFont(new java.awt.Font("Didot", 1, 14)); // NOI18N
+        btnDeleteHouse.setBackground(new java.awt.Color(102, 204, 255));
+        btnDeleteHouse.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDeleteHouse.setText("Delete");
         btnDeleteHouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -525,13 +540,17 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
-        BtnBack1.setText("Back");
+        BtnBack1.setFont(BtnBack1.getFont().deriveFont(BtnBack1.getFont().getSize()+5f));
+        BtnBack1.setText("↩");
+        BtnBack1.setBorderPainted(false);
+        BtnBack1.setContentAreaFilled(false);
         BtnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnBack1ActionPerformed(evt);
             }
         });
 
+        cityComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cityComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "New York" }));
         cityComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -539,6 +558,7 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             }
         });
 
+        commComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         commComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select" }));
         commComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -554,83 +574,74 @@ public class viewCommunityPanel extends javax.swing.JPanel {
                 .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(commHousePanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commHousePanelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnDeleteHouse)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnUpdateHouse)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSaveHouseUpdate))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE))
                     .addGroup(commHousePanelLayout.createSequentialGroup()
-                        .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(commHousePanelLayout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(BtnBack1)
-                                .addGap(129, 129, 129)
-                                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(commHousePanelLayout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblHouseId)
-                                    .addComponent(lblHouseName)
-                                    .addComponent(lblHouseComm)
-                                    .addComponent(lblHouseCity))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtHouseName)
-                                        .addComponent(txthouseId, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(cityComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(commComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(74, 74, 74)
+                        .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblHouseId)
+                            .addComponent(lblHouseName)
+                            .addComponent(lblHouseComm)
+                            .addComponent(lblHouseCity))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtHouseName)
+                            .addComponent(commComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cityComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txthouseId, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(commHousePanelLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(BtnBack1)
+                        .addGap(184, 184, 184)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(commHousePanelLayout.createSequentialGroup()
                 .addGap(184, 184, 184)
                 .addComponent(btnAddHouse)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commHousePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnDeleteHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnUpdateHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnSaveHouseUpdate)
+                .addGap(17, 17, 17))
         );
         commHousePanelLayout.setVerticalGroup(
             commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(commHousePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnBack1))
-                .addGap(1, 1, 1)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(24, 24, 24)
                 .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSaveHouseUpdate)
-                    .addComponent(btnUpdateHouse)
-                    .addComponent(btnDeleteHouse))
-                .addGap(38, 38, 38)
-                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(commHousePanelLayout.createSequentialGroup()
-                        .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblHouseId)
-                            .addComponent(txthouseId, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblHouseName)
-                            .addComponent(txtHouseName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblHouseCity)
-                        .addGap(12, 12, 12)
-                        .addComponent(lblHouseComm))
-                    .addGroup(commHousePanelLayout.createSequentialGroup()
-                        .addComponent(cityComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(commComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BtnBack1)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAddHouse)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDeleteHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdateHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSaveHouseUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lblHouseId)
+                    .addComponent(txthouseId, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(lblHouseName)
+                    .addComponent(txtHouseName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(cityComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHouseCity))
+                .addGap(75, 75, 75)
+                .addComponent(btnAddHouse, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, commHousePanelLayout.createSequentialGroup()
+                .addGap(450, 450, 450)
+                .addGroup(commHousePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHouseComm)
+                    .addComponent(commComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(77, 77, 77))
         );
 
         jLayeredPane1.add(commHousePanel, "card4");
@@ -642,12 +653,12 @@ public class viewCommunityPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(144, 144, 144))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(96, 96, 96))
         );
@@ -959,6 +970,10 @@ public class viewCommunityPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_commComboBox1ActionPerformed
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
 private int getUniqueId() {
     
     int randomPIN = (int)(Math.random()*90000)+10000;
@@ -1049,9 +1064,7 @@ private String[] requiredCommunity(String cityName){
     private javax.swing.JPanel commPanel;
     private javax.swing.JButton hosDirBtn;
     private javax.swing.JButton hosDirBtn1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
